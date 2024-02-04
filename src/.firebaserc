@@ -1,0 +1,8 @@
+{
+  "projects": {
+    "default": "nat-clone",
+    "amazon-nat-clone": "nat-clone"
+  },
+  "targets": {},
+  "etags": {}
+}
