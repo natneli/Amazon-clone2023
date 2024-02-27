@@ -110,3 +110,77 @@
 Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
  
 [debug] [2023-12-18T05:01:46.904Z] Received signal SIGHUP 1
+[debug] [2024-02-27T01:12:33.372Z] ----------------------------------------------------------------------
+[debug] [2024-02-27T01:12:33.373Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\natan\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js functions:shell
+[debug] [2024-02-27T01:12:33.374Z] CLI Version:   13.0.1
+[debug] [2024-02-27T01:12:33.374Z] Platform:      win32
+[debug] [2024-02-27T01:12:33.374Z] Node Version:  v18.17.0
+[debug] [2024-02-27T01:12:33.374Z] Time:          Mon Feb 26 2024 18:12:33 GMT-0700 (Mountain Standard Time)
+[debug] [2024-02-27T01:12:33.374Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-02-27T01:12:33.377Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2024-02-27T01:12:33.463Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-02-27T01:12:33.463Z] > authorizing via signed-in user (natanhaileselassie@gmail.com)
+[debug] [2024-02-27T01:12:33.463Z] [iam] checking project nat-4ed21 for permissions ["firebase.projects.get"]
+[debug] [2024-02-27T01:12:33.464Z] > refreshing access token with scopes: []
+[debug] [2024-02-27T01:12:33.465Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-02-27T01:12:33.465Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-02-27T01:12:33.583Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2024-02-27T01:12:33.583Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2024-02-27T01:12:33.617Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2024-02-27T01:12:33.617Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-02-27T01:12:33.625Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/nat-4ed21:testIamPermissions [none]
+[debug] [2024-02-27T01:12:33.625Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/nat-4ed21:testIamPermissions x-goog-quota-user=projects/nat-4ed21
+[debug] [2024-02-27T01:12:33.625Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/nat-4ed21:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2024-02-27T01:12:33.871Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/nat-4ed21:testIamPermissions 200
+[debug] [2024-02-27T01:12:33.871Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/nat-4ed21:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2024-02-27T01:12:33.874Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-02-27T01:12:33.876Z] defaultcredentials: writing to file C:\Users\natan\AppData\Roaming\firebase\natanhaileselassie_gmail_com_application_default_credentials.json
+[debug] [2024-02-27T01:12:33.880Z] DEBUG: Setting GAC to C:\Users\natan\AppData\Roaming\firebase\natanhaileselassie_gmail_com_application_default_credentials.json
+[debug] [2024-02-27T01:12:33.881Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/nat-4ed21/adminSdkConfig [none]
+[debug] [2024-02-27T01:12:34.102Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/nat-4ed21/adminSdkConfig 200
+[debug] [2024-02-27T01:12:34.102Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/nat-4ed21/adminSdkConfig {"projectId":"nat-4ed21","storageBucket":"nat-4ed21.appspot.com"}
+[debug] [2024-02-27T01:12:34.115Z] [functions] Watching "C:\Users\natan\OneDrive\Desktop\EVANGADI\Amazon Clone Project\amazon-clone\functions" for Cloud Functions...
+[debug] [2024-02-27T01:12:34.119Z] Validating nodejs source
+[warn] !  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[debug] [2024-02-27T01:12:35.160Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.5.0",
+    "stripe": "^13.9.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2024-02-27T01:12:35.160Z] Building nodejs source
+[debug] [2024-02-27T01:12:35.160Z] Failed to find version of module node: reached end of search path C:\Users\natan\OneDrive\Desktop\EVANGADI\Amazon Clone Project\amazon-clone\functions\node_modules
+[info] +  functions: Using node@18 from host. 
+[debug] [2024-02-27T01:12:35.163Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-02-27T01:12:35.169Z] Found firebase-functions binary at 'C:\Users\natan\OneDrive\Desktop\EVANGADI\Amazon Clone Project\amazon-clone\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8347
+
+[debug] [2024-02-27T01:12:35.837Z] Got response from /__/functions.yaml {"endpoints":{"api":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2024-02-27T01:12:35.856Z] [functions] Loaded functions definitions from source: api.
+[debug] [2024-02-27T01:12:35.856Z] [functions[us-central1-api]] http function initialized (http://127.0.0.1:5010/nat-4ed21/us-central1/api).
+[info] i  functions: Loaded functions: api 
+[warn] !  functions: The following emulators are not running, calls to these services will affect production: firestore, database, pubsub, storage, eventarc 
